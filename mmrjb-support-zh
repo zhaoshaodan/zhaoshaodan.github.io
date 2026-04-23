@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>密码日记本 - 技术支持</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; padding: 40px; line-height: 1.6; color: #333; }
+    h1 { color: #000; }
+  </style>
+</head>
+<body>
+  <h1>密码日记本 - 技术支持</h1>
+  <p>感谢您使用 <strong>密码日记本</strong>！这是一款注重隐私与安全的本地日记应用，所有内容仅保存在您的设备中，无需联网。</p>
+  <p>如您在使用过程中遇到任何问题（例如：忘记密码、导出PDF失败、界面显示异常等），或对功能有建议，请通过以下方式联系我们：</p>
+  <p><strong>联系邮箱：</strong> support@zhaoshaodan.com</p>
+  <p>我们通常会在 48 小时内回复您。</p>
+  <p>⚠️ 温馨提示：由于本应用不包含云端备份功能，卸载后所有数据将被永久删除，请务必提前导出重要日记。</p>
+  <p>—— 密码日记本 开发团队</p>
+</body>
+</html>
