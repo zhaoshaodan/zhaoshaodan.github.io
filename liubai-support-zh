@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>留白 Liubai - 技术支持</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; padding: 40px; line-height: 1.6; color: #333; }
+h1 { color: #000; }
+</style>
+</head>
+<body>
+<h1>留白 Liubai - 技术支持</h1>
+<p>感谢您使用 <strong>留白 Liubai</strong>！这是一款帮助你放下手机、专注当下的自律工具。它不打断你，只是温柔地提醒：此刻，把注意力还给眼前。</p>
 
+<h2>常见问题</h2>
+<p><strong>1. 专注倒计时如何使用？</strong><br/>在「专注」页选择时长，点击「开始」即可进入专注。专注期间建议把手机放下，安心做自己的事。</p>
+<p><strong>2. 深度专注是什么？</strong><br/>开启后，你可以选择想在专注期间暂时远离的 App，专注时它们会被屏蔽，帮你真正「放下」。首次使用会请求「屏幕使用时间」授权，请允许后即可生效。</p>
+<p><strong>3. 如何设置每日目标？</strong><br/>在「挑战」页或右上角「设置」中，可选择每日 1–4 小时的专注目标，完成后即可打卡。</p>
+<p><strong>4. 订阅如何管理或取消？</strong><br/>在「设置」中点击订阅卡片，或前往 iPhone「设置」→ 你的 Apple ID →「订阅」中管理。</p>
+<p><strong>5. 恢复购买失败怎么办？</strong><br/>请确认使用的是购买时的同一个 Apple ID，并在订阅页点击「恢复购买」。</p>
+
+<h2>联系我们</h2>
+<p>如您在使用过程中遇到任何问题，或对功能有建议，请通过以下方式联系我们：</p>
+<p><strong>联系邮箱：</strong> support@zhaoshaodan.com</p>
+<p>我们通常会在 48 小时内回复您。</p>
+<p>⚠️ 温馨提示：本应用所有数据（专注记录、挑战、设置）仅保存在您的设备本地，不包含云端备份。卸载应用后，这些数据将被永久删除，请知悉。</p>
+<p>—— 留白 Liubai 开发团队</p>
+</body>
+</html>
