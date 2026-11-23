@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FungiLens — Privacy Policy</title>
+<style>
+  :root {
+    --bg: #f7f6f3;
+    --card: #ffffff;
+    --ink: #1f2937;
+    --muted: #6b7280;
+    --accent: #2f6f4f;
+    --accent-soft: #e8f2ec;
+    --border: #e5e7eb;
+    --warn-bg: #fff7ed;
+    --warn-border: #f59e0b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .hero {
+    background: linear-gradient(135deg, #2f6f4f 0%, #1f4d36 100%);
+    color: #fff;
+    padding: 56px 24px 48px;
+    text-align: center;
+  }
+  .hero .emoji { font-size: 44px; }
+  .hero h1 { font-size: 30px; font-weight: 700; margin-top: 8px; letter-spacing: -0.5px; }
+  .hero p { color: rgba(255,255,255,0.85); margin-top: 6px; font-size: 15px; }
+  main { max-width: 720px; margin: -24px auto 64px; padding: 0 20px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 32px 24px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  }
+  .updated { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+  h2 {
+    font-size: 19px;
+    color: var(--accent);
+    margin: 28px 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2:first-of-type { margin-top: 8px; }
+  p, li { font-size: 15px; margin-bottom: 8px; color: #374151; }
+  ul { padding-left: 22px; margin-bottom: 10px; }
+  strong { color: var(--ink); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 14px; }
+  th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  .notice {
+    background: var(--warn-bg);
+    border-left: 4px solid var(--warn-border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 15px;
+  }
+  .notice strong { display: block; margin-bottom: 4px; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    padding: 0 20px 48px;
+  }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="emoji">🍄</div>
+    <h1>FungiLens Privacy Policy</h1>
+    <p>How we handle your photos, identifiers and data</p>
+  </div>
+
+  <main>
+    <div class="card">
+      <p class="updated"><strong>Last updated:</strong> November 23, 2026</p>
+
+      <p>FungiLens ("we", "our", or "the App") is a mushroom and wild plant identification application. This Privacy Policy explains what information the App collects, how it is used, and the choices you have. By using the App, you agree to the practices described below.</p>
+
+      <h2>1. Information We Collect</h2>
+
+      <h3 style="color:#1f4d36; margin:16px 0 8px; font-size:16px;">1.1 Photos you submit for identification</h3>
+      <ul>
+        <li>When you use the identification feature, the photo you choose (from the camera or photo library) is <strong>compressed and uploaded to our backend service</strong> for AI analysis.</li>
+        <li><strong>We do not store your original photos on our servers.</strong> Photos are processed in memory, used solely to generate an identification result, and discarded after the response is returned.</li>
+        <li>A small <strong>thumbnail</strong> of the photo is stored <strong>only on your own device</strong>, together with your identification history, so you can review past results. This data never leaves your device unless you delete it.</li>
+      </ul>
+
+      <h3 style="color:#1f4d36; margin:16px 0 8px; font-size:16px;">1.2 Identification results</h3>
+      <ul>
+        <li>The AI-generated result (species name, edibility classification, confidence, warnings) is saved in the App's local history on your device.</li>
+        <li>Anonymous, non-identifying technical logs (e.g. error reports, request timestamps) may be retained on our servers to maintain service quality and improve identification accuracy. These logs are not linked to your identity.</li>
+      </ul>
+
+      <h3 style="color:#1f4d36; margin:16px 0 8px; font-size:16px;">1.3 Device identifier</h3>
+      <p>The App generates a <strong>random anonymous device ID</strong> that is sent with each request. It is used <strong>only</strong> to enforce the monthly free-usage limit and prevent abuse. It contains no personal information and is not linked to your name, email, or Apple ID.</p>
+
+      <h3 style="color:#1f4d36; margin:16px 0 8px; font-size:16px;">1.4 Purchase information (if you subscribe)</h3>
+      <ul>
+        <li>Subscriptions are processed by <strong>Apple</strong> and managed through the third-party service <strong>RevenueCat</strong>. We receive an anonymous user ID and subscription status from RevenueCat to unlock unlimited usage for paying users.</li>
+        <li><strong>We never see or store your payment details.</strong> All payment data is handled by Apple under Apple's privacy policy.</li>
+      </ul>
+
+      <h2>2. Third-Party Services</h2>
+      <table>
+        <tr><th>Service</th><th>Purpose</th><th>Data involved</th></tr>
+        <tr><td><strong>Cloudflare</strong> (Workers &amp; KV)</td><td>Backend proxy that forwards identification requests and enforces usage limits</td><td>Compressed photo, anonymous device ID</td></tr>
+        <tr><td><strong>Zhipu AI (Z.ai / BigModel)</strong></td><td>AI vision model that analyzes the photo and produces the identification result</td><td>Compressed photo. <strong>Processing takes place on servers located in China.</strong></td></tr>
+        <tr><td><strong>RevenueCat</strong></td><td>Subscription management</td><td>Anonymous app user ID, subscription status</td></tr>
+        <tr><td><strong>Apple</strong></td><td>In-App Purchases, TestFlight, App Store</td><td>Payment and account data as per Apple's policies</td></tr>
+      </table>
+      <p>We do not sell, rent, or share your information with advertisers. The App contains <strong>no advertising or analytics/tracking SDKs</strong>.</p>
+
+      <h2>3. International Data Transfers</h2>
+      <p>Our backend runs on Cloudflare's global network; AI photo analysis is performed by Zhipu AI on servers <strong>located in mainland China</strong>. By submitting a photo for identification, you consent to this transfer and processing. We do not transfer any other personal data to China.</p>
+
+      <h2>4. Legal Bases (EEA/UK users)</h2>
+      <p>We process photos and device identifiers on the basis of <strong>your consent</strong> (given when you submit a photo) and <strong>legitimate interest</strong> (preventing abuse of the free quota). You may withdraw consent at any time by discontinuing use of the identification feature.</p>
+
+      <h2>5. Data Retention</h2>
+      <ul>
+        <li><strong>Original photos:</strong> not stored on servers (processed in memory only).</li>
+        <li><strong>Identifications &amp; thumbnails:</strong> stored on your device until you delete them (in-app) or uninstall the App.</li>
+        <li><strong>Server-side usage counters:</strong> anonymous monthly request counts, deleted automatically after ~45 days.</li>
+        <li><strong>Anonymous technical logs:</strong> retained for a limited period for service operations.</li>
+      </ul>
+
+      <h2>6. Your Rights and Choices</h2>
+      <p>Depending on your jurisdiction (including rights under the GDPR and CCPA), you may:</p>
+      <ul>
+        <li><strong>Delete your history</strong> at any time within the App;</li>
+        <li><strong>Request deletion</strong> of server-side anonymous data associated with your device ID by contacting us;</li>
+        <li><strong>Cancel your subscription</strong> via your Apple ID settings at any time;</li>
+        <li>Contact us to access, correct, or export any personal data we hold about you (we hold very little — see sections above).</li>
+      </ul>
+      <p>We do not knowingly collect data from children under 13. The App is not directed at children.</p>
+
+      <h2>7. Important Safety Notice</h2>
+      <div class="notice">
+        <strong>Identification results are AI-generated and may be wrong.</strong>
+        They are provided for informational purposes only and do not constitute professional advice. <strong>Never eat any wild mushroom or plant based solely on the App's output.</strong> Always consult a qualified expert before consuming anything you find in the wild.
+      </div>
+
+      <h2>8. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy as the App evolves. Material changes will be announced within the App or on this page with a new "Last updated" date.</p>
+
+      <h2>9. Contact Us</h2>
+      <p>If you have questions about this policy or your data, contact us at <strong>support@fungilens.example.com</strong>.</p>
+    </div>
+  </main>
+
+  <footer>© 2026 FungiLens. All rights reserved.</footer>
+</body>
+</html>
