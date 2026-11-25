@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" data-title-en="FungiLens — Terms of Use" data-title-zh="FungiLens — 使用条款">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FungiLens — Terms of Use</title>
+<style>
+  :root {
+    --bg: #f7f6f3;
+    --card: #ffffff;
+    --ink: #1f2937;
+    --muted: #6b7280;
+    --accent: #366751;
+    --accent-soft: #e8f2ec;
+    --border: #e5e7eb;
+    --warn-bg: #fff7ed;
+    --warn-border: #f59e0b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .hero {
+    background: linear-gradient(135deg, #366751 0%, #264c3b 100%);
+    color: #fff;
+    padding: 56px 24px 48px;
+    text-align: center;
+  }
+  .hero .app-icon {
+    width: 84px;
+    height: 84px;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+    border: 3px solid rgba(255,255,255,0.9);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.32);
+  }
+  .hero h1 { font-size: 30px; font-weight: 700; margin-top: 14px; letter-spacing: -0.5px; }
+  .footer-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    vertical-align: -3px;
+    margin-right: 3px;
+  }
+  .hero p { color: rgba(255,255,255,0.85); margin-top: 6px; font-size: 15px; }
+  main { max-width: 720px; margin: -24px auto 64px; padding: 0 20px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px 32px 24px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+  }
+  h2 { font-size: 19px; color: var(--accent); margin: 4px 0 12px; }
+  h3 { color: #264c3b; margin: 16px 0 8px; font-size: 16px; }
+  p, li { font-size: 15px; margin-bottom: 8px; color: #374151; }
+  ul, ol { padding-left: 22px; margin-bottom: 10px; }
+  strong { color: var(--ink); }
+  a { color: var(--accent); font-weight: 500; }
+  .alert {
+    background: #fef2f2;
+    border-left: 4px solid #dc2626;
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 14px 0;
+    font-size: 15px;
+  }
+  .alert strong { display: block; margin-bottom: 6px; color: #b91c1c; font-size: 16px; }
+  .notice {
+    background: var(--warn-bg);
+    border-left: 4px solid var(--warn-border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 15px;
+  }
+  .notice strong { display: block; margin-bottom: 4px; }
+  .meta { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 0 20px 48px; }
+  footer a { color: var(--accent); font-weight: normal; }
+
+  /* Language switch — pure CSS/JS, no external dependencies. */
+  .lang-switch {
+    position: fixed;
+    top: 14px;
+    right: 16px;
+    z-index: 100;
+    display: flex;
+    gap: 2px;
+    padding: 3px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.94);
+    border: 1px solid rgba(255,255,255,0.7);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.14);
+  }
+  .lang-switch button {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 6px 13px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--accent);
+    cursor: pointer;
+  }
+  .lang-switch button[aria-pressed="true"] {
+    background: var(--accent);
+    color: #fff;
+  }
+  .page[data-lang="zh"] { display: none; }
+  html.lang-zh .page[data-lang="en"] { display: none; }
+  html.lang-zh .page[data-lang="zh"] { display: block; }
+  @media (max-width: 560px) {
+    .hero { padding-top: 68px; }
+    .hero h1 { font-size: 25px; }
+  }
+</style>
+<link rel="icon" type="image/png" href="app-icon.png">
+</head>
+<body>
+
+  <div class="lang-switch" role="group" aria-label="Language / 语言">
+    <button id="lang-en" type="button" aria-pressed="true">EN</button>
+    <button id="lang-zh" type="button" aria-pressed="false">中文</button>
+  </div>
+
+  <!-- ============================== ENGLISH ============================== -->
+  <div class="page" data-lang="en">
+    <div class="hero">
+      <img class="app-icon" src="app-icon.png" alt="FungiLens app icon">
+      <h1>FungiLens Terms of Use</h1>
+      <p>End User License Agreement &middot; Last updated: 2026</p>
+    </div>
+
+    <main>
+      <div class="card">
+        <div class="alert">
+          <strong>AI identification is for reference only — it is not a guarantee of food safety. Never decide to eat a mushroom or wild plant based on AI judgment alone.</strong>
+          Many edible species closely resemble deadly ones. Always confirm with a qualified local expert or an authoritative field guide before consuming anything, and follow all applicable local laws when foraging.
+        </div>
+        <p class="meta">Please read these Terms of Use ("Terms") carefully before using the FungiLens iOS application (the "App"). By downloading, installing or using the App you agree to be bound by these Terms. If you do not agree, do not use the App.</p>
+      </div>
+
+      <div class="card">
+        <h2>1. Description of Service</h2>
+        <p>FungiLens is an AI-assisted reference tool that analyses a photo you submit and returns a possible identification of a mushroom or wild plant, together with a confidence level, an edibility category and general warnings. The App is intended for education and reference only.</p>
+        <p>The analysis is performed by a third-party artificial-intelligence model. Results are probabilistic, may be inaccurate or incomplete, and can change between requests. The App does not provide medical, toxicological, botanical-professional or emergency advice, and it does not replace examination of a physical specimen by a qualified person.</p>
+        <h3>1.1 Your responsibilities</h3>
+        <ul>
+          <li>Do not consume any organism based solely on a result from the App.</li>
+          <li>Supervise children and other users who rely on information from the App.</li>
+          <li>Comply with local regulations regarding foraging, collection and consumption of wild organisms.</li>
+          <li>Do not use the App for any safety-critical or commercial food-safety decision.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>2. No Safety Guarantee &amp; Limitation of Liability</h2>
+        <p>We do not warrant that any identification, edibility classification, confidence score or warning is accurate, complete or current. A result labelled "Edible" is not a determination that a specimen is safe to eat, and the absence of a warning is not evidence of safety.</p>
+        <p>To the maximum extent permitted by law, FungiLens and its operators are not liable for any illness, injury, death, property damage or other loss arising from the use of, or reliance on, the App or its results. Your use of the App is entirely at your own risk.</p>
+      </div>
+
+      <div class="card">
+        <h2>3. Accounts, Free Quota and Pro Subscription</h2>
+        <p>The App provides a limited number of free identifications per device each month. Unlimited identifications are available through an optional auto-renewing Pro subscription.</p>
+        <h3>3.1 Subscription disclosure (Apple standard terms)</h3>
+        <ul>
+          <li><strong>Payment:</strong> Payment is charged to your Apple ID account at confirmation of purchase.</li>
+          <li><strong>Auto-renewal:</strong> Your subscription renews automatically unless it is cancelled at least 24 hours before the end of the current period.</li>
+          <li><strong>Renewal charge:</strong> Your account will be charged for renewal within 24 hours prior to the end of the current period at the price stated in the App.</li>
+          <li><strong>Manage or cancel:</strong> You can manage or cancel your subscription in your Apple ID account settings after purchase. Any unused portion of a free trial, if offered, will be forfeited when you purchase a subscription.</li>
+          <li><strong>Refunds:</strong> All transactions are processed by Apple. Refund requests are subject to Apple's policies and should be submitted through Apple.</li>
+        </ul>
+        <p>Prices and plan details are shown in the App before purchase and may change; any change takes effect only for future renewal periods and always remains subject to applicable law and App Store rules.</p>
+      </div>
+
+      <div class="card">
+        <h2>4. Acceptable Use</h2>
+        <p>You agree not to misuse the service, including by attempting to bypass usage limits, reverse engineering the App, interfering with its operation, submitting unlawful content, or using automated scripts to extract results in bulk. We may restrict or terminate access to the service for abuse.</p>
+      </div>
+
+      <div class="card">
+        <h2>5. Intellectual Property</h2>
+        <p>The App, its design, text and graphics are owned by FungiLens or its licensors and are protected by applicable intellectual-property laws. You may use them only for personal, non-commercial purposes as permitted by these Terms.</p>
+      </div>
+
+      <div class="card">
+        <h2>6. Privacy and Data</h2>
+        <p>Your use of the App is also governed by our Privacy Policy, which explains what data is collected, how photos are processed, and your choices. Photos are transmitted only to produce your identification result and are not stored long-term on our servers; a small thumbnail may be saved locally on your device in your history.</p>
+        <div class="notice">
+          <strong>Privacy Policy</strong>
+          Please read the full policy before using the App: <a href="fungiLens-privacy-en.html">FungiLens Privacy Policy</a>.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>7. Changes to These Terms</h2>
+        <p>We may update these Terms to reflect changes to the App or legal requirements. When material changes are made, the App will present the disclaimer and terms again for your confirmation. The "Last updated" date at the top of this page indicates the current version.</p>
+      </div>
+
+      <div class="card">
+        <h2>8. Contact</h2>
+        <p>Questions about these Terms can be sent to our support contact below. We aim to reply within 24 hours.</p>
+        <p><strong>Email:</strong> <a href="mailto:support@fungilens.example.com">support@fungilens.example.com</a></p>
+        <p>For general help and frequently asked questions, visit <a href="fungiLens-support-en.html">FungiLens Support</a>.</p>
+      </div>
+    </main>
+
+    <footer>
+      <img class="footer-icon" src="app-icon.png" alt=""> <a href="fungiLens-privacy-en.html">Privacy Policy</a> &middot; <a href="fungiLens-support-en.html">Support</a> &middot; © 2026 FungiLens. All rights reserved.
+    </footer>
+  </div>
+
+  <!-- ============================== 中文 ============================== -->
+  <div class="page" data-lang="zh">
+    <div class="hero">
+      <img class="app-icon" src="app-icon.png" alt="FungiLens app icon">
+      <h1>FungiLens 使用条款</h1>
+      <p>最终用户许可协议 &middot; 最后更新：2026 年</p>
+    </div>
+
+    <main>
+      <div class="card">
+        <div class="alert">
+          <strong>AI 识别仅供参考，不构成食用安全保证，切勿仅凭 AI 判断食用。</strong>
+          许多可食物种与剧毒物种外形极为相似。食用任何东西前，务必咨询合格的当地专家或权威图鉴，并遵守当地所有采集法规。
+        </div>
+        <p class="meta">在使用 FungiLens iOS 应用（"本 App"）前，请仔细阅读本使用条款（"条款"）。下载、安装或使用本 App 即表示你同意受本条款约束。如果你不同意，请勿使用本 App。</p>
+      </div>
+
+      <div class="card">
+        <h2>1. 服务说明</h2>
+        <p>FungiLens 是一款 AI 辅助的参考工具，分析你提交的照片，返回可能的蘑菇或野生植物识别结果，以及置信度、可食性分类和一般警告。本 App 仅用于教育与参考。</p>
+        <p>分析由第三方人工智能模型执行。结果是概率性的，可能不准确或不完整，并可能在不同请求之间变化。本 App 不提供医学、毒理学、植物学专业或紧急建议，也不能替代由合格人员对实物标本进行的检验。</p>
+        <h3>1.1 你的责任</h3>
+        <ul>
+          <li>切勿仅凭本 App 的结果食用任何生物。</li>
+          <li>监督依赖本 App 信息的儿童及其他使用者。</li>
+          <li>遵守当地关于采集、收集与食用野生生物的法规。</li>
+          <li>不得将本 App 用于任何安全关键或商业食品安全决策。</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>2. 不保证安全与责任限制</h2>
+        <p>我们不保证任何识别、可食性分类、置信度或警告是准确、完整或最新的。标注为"可食用"的结果并不表示样本一定可以安全食用，没有警告也不代表安全。</p>
+        <p>在法律允许的最大范围内，对于因使用或依赖本 App 或其结果而产生的任何疾病、伤害、死亡、财产损失或其他损失，FungiLens 及其运营者不承担责任。你使用本 App 的风险完全由你自己承担。</p>
+      </div>
+
+      <div class="card">
+        <h2>3. 账户、免费额度与 Pro 订阅</h2>
+        <p>本 App 为每台设备每月提供有限的免费识别次数。订阅后可解锁无限次识别。</p>
+        <h3>3.1 订阅披露（Apple 标准条款）</h3>
+        <ul>
+          <li><strong>付款：</strong>购买确认时，费用将从你的 Apple ID 账户扣除。</li>
+          <li><strong>自动续订：</strong>除非在当前周期结束前至少 24 小时取消，否则订阅将自动续期。</li>
+          <li><strong>续订扣款：</strong>你的账户将在当前周期结束前 24 小时内，按 App 中标示的价格被扣款。</li>
+          <li><strong>管理与取消：</strong>购买后，你可以在 Apple ID 账户设置中管理或取消订阅。如果提供免费试用，购买订阅后任何未使用的试用部分将作废。</li>
+          <li><strong>退款：</strong>所有交易均由 Apple 处理。退款申请须遵守 Apple 的政策，并应通过 Apple 提交。</li>
+        </ul>
+        <p>价格与套餐详情在购买前于 App 内显示，可能会变更；任何变更仅对未来续订周期生效，并始终遵守适用法律与 App Store 规则。</p>
+      </div>
+
+      <div class="card">
+        <h2>4. 可接受使用</h2>
+        <p>你同意不滥用本服务，包括试图绕过使用次数限制、对本 App 逆向工程、干扰其运行、提交非法内容，或使用自动化脚本批量提取结果。对于滥用行为，我们可能限制或终止访问本服务。</p>
+      </div>
+
+      <div class="card">
+        <h2>5. 知识产权</h2>
+        <p>本 App、其设计、文字与图形归 FungiLens 或其许可方所有，并受适用知识产权法保护。你只能按照本条款允许的方式将其用于个人、非商业目的。</p>
+      </div>
+
+      <div class="card">
+        <h2>6. 隐私与数据</h2>
+        <p>你对本 App 的使用还受隐私政策约束，该政策说明了收集哪些数据、照片如何处理以及你的选择。照片仅用于生成识别结果，不会长期存储在我们的服务器上；你的设备上可能会在本地历史记录中保存一张小缩略图。</p>
+        <div class="notice">
+          <strong>隐私政策</strong>
+          使用本 App 前请阅读完整政策：<a href="fungiLens-privacy-en.html">FungiLens 隐私政策</a>。
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>7. 条款变更</h2>
+        <p>我们可能会更新本条款以反映 App 的变更或法律要求。发生实质性变更时，App 会再次展示免责声明与条款供你确认。本页顶部的"最后更新"日期表示当前版本。</p>
+      </div>
+
+      <div class="card">
+        <h2>8. 联系我们</h2>
+        <p>有关本条款的问题可发送至下方支持邮箱。我们力争在 24 小时内回复。</p>
+        <p><strong>邮箱：</strong><a href="mailto:support@fungilens.example.com">support@fungilens.example.com</a></p>
+        <p>如需一般帮助和常见问题，请访问 <a href="fungiLens-support-en.html">FungiLens 技术支持</a>。</p>
+      </div>
+    </main>
+
+    <footer>
+      <img class="footer-icon" src="app-icon.png" alt=""> <a href="fungiLens-privacy-en.html">隐私政策</a> &middot; <a href="fungiLens-support-en.html">技术支持</a> &middot; © 2026 FungiLens 保留所有权利。
+    </footer>
+  </div>
+
+  <script>
+  (function () {
+    var KEY = 'fungilens.lang';
+    var root = document.documentElement;
+    function readStored() {
+      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+    }
+    function setLang(next) {
+      var lang = next === 'zh' ? 'zh' : 'en';
+      root.classList.toggle('lang-zh', lang === 'zh');
+      root.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
+      var enBtn = document.getElementById('lang-en');
+      var zhBtn = document.getElementById('lang-zh');
+      if (enBtn) enBtn.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+      if (zhBtn) zhBtn.setAttribute('aria-pressed', lang === 'zh' ? 'true' : 'false');
+      var enTitle = root.getAttribute('data-title-en');
+      var zhTitle = root.getAttribute('data-title-zh');
+      document.title = (lang === 'zh' && zhTitle) ? zhTitle : (enTitle || document.title);
+    }
+    window.setLang = setLang;
+    var start = readStored() === 'zh' ? 'zh' : 'en';
+    setLang(start);
+    document.addEventListener('DOMContentLoaded', function () {
+      var enBtn = document.getElementById('lang-en');
+      var zhBtn = document.getElementById('lang-zh');
+      if (enBtn) enBtn.addEventListener('click', function () { setLang('en'); });
+      if (zhBtn) zhBtn.addEventListener('click', function () { setLang('zh'); });
+      setLang(start);
+    });
+  })();
+  </script>
+</body>
+</html>
