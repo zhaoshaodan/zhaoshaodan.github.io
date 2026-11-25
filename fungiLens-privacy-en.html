@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-en="FungiLens — Privacy Policy" data-title-zh="FungiLens — 隐私政策">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     --card: #ffffff;
     --ink: #1f2937;
     --muted: #6b7280;
-    --accent: #2f6f4f;
+    --accent: #366751;
     --accent-soft: #e8f2ec;
     --border: #e5e7eb;
     --warn-bg: #fff7ed;
@@ -25,13 +25,28 @@
     -webkit-font-smoothing: antialiased;
   }
   .hero {
-    background: linear-gradient(135deg, #2f6f4f 0%, #1f4d36 100%);
+    background: linear-gradient(135deg, #366751 0%, #264c3b 100%);
     color: #fff;
     padding: 56px 24px 48px;
     text-align: center;
   }
-  .hero .emoji { font-size: 44px; }
-  .hero h1 { font-size: 30px; font-weight: 700; margin-top: 8px; letter-spacing: -0.5px; }
+  .hero .app-icon {
+    width: 84px;
+    height: 84px;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+    border: 3px solid rgba(255,255,255,0.9);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.32);
+  }
+  .hero h1 { font-size: 30px; font-weight: 700; margin-top: 14px; letter-spacing: -0.5px; }
+  .footer-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    vertical-align: -3px;
+    margin-right: 3px;
+  }
   .hero p { color: rgba(255,255,255,0.85); margin-top: 6px; font-size: 15px; }
   main { max-width: 720px; margin: -24px auto 64px; padding: 0 20px; }
   .card {
@@ -73,93 +88,263 @@
     padding: 0 20px 48px;
   }
   footer a { color: var(--accent); }
+
+  /* Language switch — pure CSS/JS, no external dependencies. */
+  .lang-switch {
+    position: fixed;
+    top: 14px;
+    right: 16px;
+    z-index: 100;
+    display: flex;
+    gap: 2px;
+    padding: 3px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.94);
+    border: 1px solid rgba(255,255,255,0.7);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.14);
+  }
+  .lang-switch button {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 6px 13px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--accent);
+    cursor: pointer;
+  }
+  .lang-switch button[aria-pressed="true"] {
+    background: var(--accent);
+    color: #fff;
+  }
+  .page[data-lang="zh"] { display: none; }
+  html.lang-zh .page[data-lang="en"] { display: none; }
+  html.lang-zh .page[data-lang="zh"] { display: block; }
+  @media (max-width: 560px) {
+    .hero { padding-top: 68px; }
+    .hero h1 { font-size: 25px; }
+  }
 </style>
+<link rel="icon" type="image/png" href="app-icon.png">
 </head>
 <body>
-  <div class="hero">
-    <div class="emoji">🍄</div>
-    <h1>FungiLens Privacy Policy</h1>
-    <p>How we handle your photos, identifiers and data</p>
+
+  <div class="lang-switch" role="group" aria-label="Language / 语言">
+    <button id="lang-en" type="button" aria-pressed="true">EN</button>
+    <button id="lang-zh" type="button" aria-pressed="false">中文</button>
   </div>
 
-  <main>
-    <div class="card">
-      <p class="updated"><strong>Last updated:</strong> November 23, 2026</p>
-
-      <p>FungiLens ("we", "our", or "the App") is a mushroom and wild plant identification application. This Privacy Policy explains what information the App collects, how it is used, and the choices you have. By using the App, you agree to the practices described below.</p>
-
-      <h2>1. Information We Collect</h2>
-
-      <h3 style="color:#1f4d36; margin:16px 0 8px; font-size:16px;">1.1 Photos you submit for identification</h3>
-      <ul>
-        <li>When you use the identification feature, the photo you choose (from the camera or photo library) is <strong>compressed and uploaded to our backend service</strong> for AI analysis.</li>
-        <li><strong>We do not store your original photos on our servers.</strong> Photos are processed in memory, used solely to generate an identification result, and discarded after the response is returned.</li>
-        <li>A small <strong>thumbnail</strong> of the photo is stored <strong>only on your own device</strong>, together with your identification history, so you can review past results. This data never leaves your device unless you delete it.</li>
-      </ul>
-
-      <h3 style="color:#1f4d36; margin:16px 0 8px; font-size:16px;">1.2 Identification results</h3>
-      <ul>
-        <li>The AI-generated result (species name, edibility classification, confidence, warnings) is saved in the App's local history on your device.</li>
-        <li>Anonymous, non-identifying technical logs (e.g. error reports, request timestamps) may be retained on our servers to maintain service quality and improve identification accuracy. These logs are not linked to your identity.</li>
-      </ul>
-
-      <h3 style="color:#1f4d36; margin:16px 0 8px; font-size:16px;">1.3 Device identifier</h3>
-      <p>The App generates a <strong>random anonymous device ID</strong> that is sent with each request. It is used <strong>only</strong> to enforce the monthly free-usage limit and prevent abuse. It contains no personal information and is not linked to your name, email, or Apple ID.</p>
-
-      <h3 style="color:#1f4d36; margin:16px 0 8px; font-size:16px;">1.4 Purchase information (if you subscribe)</h3>
-      <ul>
-        <li>Subscriptions are processed by <strong>Apple</strong> and managed through the third-party service <strong>RevenueCat</strong>. We receive an anonymous user ID and subscription status from RevenueCat to unlock unlimited usage for paying users.</li>
-        <li><strong>We never see or store your payment details.</strong> All payment data is handled by Apple under Apple's privacy policy.</li>
-      </ul>
-
-      <h2>2. Third-Party Services</h2>
-      <table>
-        <tr><th>Service</th><th>Purpose</th><th>Data involved</th></tr>
-        <tr><td><strong>Cloudflare</strong> (Workers &amp; KV)</td><td>Backend proxy that forwards identification requests and enforces usage limits</td><td>Compressed photo, anonymous device ID</td></tr>
-        <tr><td><strong>Zhipu AI (Z.ai / BigModel)</strong></td><td>AI vision model that analyzes the photo and produces the identification result</td><td>Compressed photo. <strong>Processing takes place on servers located in China.</strong></td></tr>
-        <tr><td><strong>RevenueCat</strong></td><td>Subscription management</td><td>Anonymous app user ID, subscription status</td></tr>
-        <tr><td><strong>Apple</strong></td><td>In-App Purchases, TestFlight, App Store</td><td>Payment and account data as per Apple's policies</td></tr>
-      </table>
-      <p>We do not sell, rent, or share your information with advertisers. The App contains <strong>no advertising or analytics/tracking SDKs</strong>.</p>
-
-      <h2>3. International Data Transfers</h2>
-      <p>Our backend runs on Cloudflare's global network; AI photo analysis is performed by Zhipu AI on servers <strong>located in mainland China</strong>. By submitting a photo for identification, you consent to this transfer and processing. We do not transfer any other personal data to China.</p>
-
-      <h2>4. Legal Bases (EEA/UK users)</h2>
-      <p>We process photos and device identifiers on the basis of <strong>your consent</strong> (given when you submit a photo) and <strong>legitimate interest</strong> (preventing abuse of the free quota). You may withdraw consent at any time by discontinuing use of the identification feature.</p>
-
-      <h2>5. Data Retention</h2>
-      <ul>
-        <li><strong>Original photos:</strong> not stored on servers (processed in memory only).</li>
-        <li><strong>Identifications &amp; thumbnails:</strong> stored on your device until you delete them (in-app) or uninstall the App.</li>
-        <li><strong>Server-side usage counters:</strong> anonymous monthly request counts, deleted automatically after ~45 days.</li>
-        <li><strong>Anonymous technical logs:</strong> retained for a limited period for service operations.</li>
-      </ul>
-
-      <h2>6. Your Rights and Choices</h2>
-      <p>Depending on your jurisdiction (including rights under the GDPR and CCPA), you may:</p>
-      <ul>
-        <li><strong>Delete your history</strong> at any time within the App;</li>
-        <li><strong>Request deletion</strong> of server-side anonymous data associated with your device ID by contacting us;</li>
-        <li><strong>Cancel your subscription</strong> via your Apple ID settings at any time;</li>
-        <li>Contact us to access, correct, or export any personal data we hold about you (we hold very little — see sections above).</li>
-      </ul>
-      <p>We do not knowingly collect data from children under 13. The App is not directed at children.</p>
-
-      <h2>7. Important Safety Notice</h2>
-      <div class="notice">
-        <strong>Identification results are AI-generated and may be wrong.</strong>
-        They are provided for informational purposes only and do not constitute professional advice. <strong>Never eat any wild mushroom or plant based solely on the App's output.</strong> Always consult a qualified expert before consuming anything you find in the wild.
-      </div>
-
-      <h2>8. Changes to This Policy</h2>
-      <p>We may update this Privacy Policy as the App evolves. Material changes will be announced within the App or on this page with a new "Last updated" date.</p>
-
-      <h2>9. Contact Us</h2>
-      <p>If you have questions about this policy or your data, contact us at <strong>yctou2026@f163.com</strong>.</p>
+  <!-- ============================== ENGLISH ============================== -->
+  <div class="page" data-lang="en">
+    <div class="hero">
+      <img class="app-icon" src="app-icon.png" alt="FungiLens app icon">
+      <h1>FungiLens Privacy Policy</h1>
+      <p>How we handle your photos, identifiers and data</p>
     </div>
-  </main>
 
-  <footer>© 2026 FungiLens. All rights reserved.</footer>
+    <main>
+      <div class="card">
+        <p class="updated"><strong>Last updated:</strong> November 23, 2026</p>
+
+        <p>FungiLens ("we", "our", or "the App") is a mushroom and wild plant identification application. This Privacy Policy explains what information the App collects, how it is used, and the choices you have. By using the App, you agree to the practices described below.</p>
+
+        <h2>1. Information We Collect</h2>
+
+        <h3 style="color:#264c3b; margin:16px 0 8px; font-size:16px;">1.1 Photos you submit for identification</h3>
+        <ul>
+          <li>When you use the identification feature, the photo you choose (from the camera or photo library) is <strong>compressed and uploaded to our backend service</strong> for AI analysis.</li>
+          <li><strong>We do not store your original photos on our servers.</strong> Photos are processed in memory, used solely to generate an identification result, and discarded after the response is returned.</li>
+          <li>A small <strong>thumbnail</strong> of the photo is stored <strong>only on your own device</strong>, together with your identification history, so you can review past results. This data never leaves your device unless you delete it.</li>
+        </ul>
+
+        <h3 style="color:#264c3b; margin:16px 0 8px; font-size:16px;">1.2 Identification results</h3>
+        <ul>
+          <li>The AI-generated result (species name, edibility classification, confidence, warnings) is saved in the App's local history on your device.</li>
+          <li>Anonymous, non-identifying technical logs (e.g. error reports, request timestamps) may be retained on our servers to maintain service quality and improve identification accuracy. These logs are not linked to your identity.</li>
+        </ul>
+
+        <h3 style="color:#264c3b; margin:16px 0 8px; font-size:16px;">1.3 Device identifier</h3>
+        <p>The App generates a <strong>random anonymous device ID</strong> that is sent with each request. It is used <strong>only</strong> to enforce the monthly free-usage limit and prevent abuse. It contains no personal information and is not linked to your name, email, or Apple ID.</p>
+
+        <h3 style="color:#264c3b; margin:16px 0 8px; font-size:16px;">1.4 Purchase information (if you subscribe)</h3>
+        <ul>
+          <li>Subscriptions are processed by <strong>Apple</strong> and managed through the third-party service <strong>RevenueCat</strong>. We receive an anonymous user ID and subscription status from RevenueCat to unlock unlimited usage for paying users.</li>
+          <li><strong>We never see or store your payment details.</strong> All payment data is handled by Apple under Apple's privacy policy.</li>
+        </ul>
+
+        <h2>2. Third-Party Services</h2>
+        <table>
+          <tr><th>Service</th><th>Purpose</th><th>Data involved</th></tr>
+          <tr><td><strong>Cloudflare</strong> (Workers &amp; KV)</td><td>Backend proxy that forwards identification requests and enforces usage limits</td><td>Compressed photo, anonymous device ID</td></tr>
+          <tr><td><strong>Zhipu AI (Z.ai / BigModel)</strong></td><td>AI vision model that analyzes the photo and produces the identification result</td><td>Compressed photo. <strong>Processing takes place on servers located in China.</strong></td></tr>
+          <tr><td><strong>RevenueCat</strong></td><td>Subscription management</td><td>Anonymous app user ID, subscription status</td></tr>
+          <tr><td><strong>Apple</strong></td><td>In-App Purchases, TestFlight, App Store</td><td>Payment and account data as per Apple's policies</td></tr>
+        </table>
+        <p>We do not sell, rent, or share your information with advertisers. The App contains <strong>no advertising or analytics/tracking SDKs</strong>.</p>
+
+        <h2>3. International Data Transfers</h2>
+        <p>Our backend runs on Cloudflare's global network; AI photo analysis is performed by Zhipu AI on servers <strong>located in mainland China</strong>. By submitting a photo for identification, you consent to this transfer and processing. We do not transfer any other personal data to China.</p>
+
+        <h2>4. Legal Bases (EEA/UK users)</h2>
+        <p>We process photos and device identifiers on the basis of <strong>your consent</strong> (given when you submit a photo) and <strong>legitimate interest</strong> (preventing abuse of the free quota). You may withdraw consent at any time by discontinuing use of the identification feature.</p>
+
+        <h2>5. Data Retention</h2>
+        <ul>
+          <li><strong>Original photos:</strong> not stored on servers (processed in memory only).</li>
+          <li><strong>Identifications &amp; thumbnails:</strong> stored on your device until you delete them (in-app) or uninstall the App.</li>
+          <li><strong>Server-side usage counters:</strong> anonymous monthly request counts, deleted automatically after ~45 days.</li>
+          <li><strong>Anonymous technical logs:</strong> retained for a limited period for service operations.</li>
+        </ul>
+
+        <h2>6. Your Rights and Choices</h2>
+        <p>Depending on your jurisdiction (including rights under the GDPR and CCPA), you may:</p>
+        <ul>
+          <li><strong>Delete your history</strong> at any time within the App;</li>
+          <li><strong>Request deletion</strong> of server-side anonymous data associated with your device ID by contacting us;</li>
+          <li><strong>Cancel your subscription</strong> via your Apple ID settings at any time;</li>
+          <li>Contact us to access, correct, or export any personal data we hold about you (we hold very little — see sections above).</li>
+        </ul>
+        <p>We do not knowingly collect data from children under 13. The App is not directed at children.</p>
+
+        <h2>7. Important Safety Notice</h2>
+        <div class="notice">
+          <strong>Identification results are AI-generated and may be wrong.</strong>
+          They are provided for informational purposes only and do not constitute professional advice. <strong>Never eat any wild mushroom or plant based solely on the App's output.</strong> Always consult a qualified expert before consuming anything you find in the wild.
+        </div>
+
+        <h2>8. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy as the App evolves. Material changes will be announced within the App or on this page with a new "Last updated" date.</p>
+
+        <h2>9. Contact Us</h2>
+        <p>If you have questions about this policy or your data, contact us at <strong>support@fungilens.example.com</strong>.</p>
+      </div>
+    </main>
+
+    <footer><img class="footer-icon" src="app-icon.png" alt=""> <a href="support.html">Support</a> · <a href="terms.html">Terms of Use</a> · © 2026 FungiLens. All rights reserved.</footer>
+  </div>
+
+  <!-- ============================== 中文 ============================== -->
+  <div class="page" data-lang="zh">
+    <div class="hero">
+      <img class="app-icon" src="app-icon.png" alt="FungiLens app icon">
+      <h1>FungiLens 隐私政策</h1>
+      <p>我们如何处理你的照片、标识符与数据</p>
+    </div>
+
+    <main>
+      <div class="card">
+        <p class="updated"><strong>最后更新：</strong>2026 年 11 月 23 日</p>
+
+        <p>FungiLens（"我们"、"我们的"或"本 App"）是一款蘑菇与野生植物识别应用。本隐私政策说明本 App 收集哪些信息、这些信息如何使用，以及你拥有哪些选择。使用本 App 即表示你同意下述做法。</p>
+
+        <h2>1. 我们收集的信息</h2>
+
+        <h3 style="color:#264c3b; margin:16px 0 8px; font-size:16px;">1.1 你提交用于识别的照片</h3>
+        <ul>
+          <li>使用识别功能时，你选择的照片（来自相机或相册）会被<strong>压缩并上传到我们的后端服务</strong>进行 AI 分析。</li>
+          <li><strong>我们不会在服务器上存储你的原始照片。</strong>照片仅在内存中处理，只用于生成识别结果，并在返回响应后丢弃。</li>
+          <li>照片的一张<strong>缩略图</strong><strong>仅存储在你自己的设备上</strong>，与识别历史记录一起保存，方便你查看过往结果。除非你主动删除，这些数据不会离开你的设备。</li>
+        </ul>
+
+        <h3 style="color:#264c3b; margin:16px 0 8px; font-size:16px;">1.2 识别结果</h3>
+        <ul>
+          <li>AI 生成的结果（物种名称、可食性分类、置信度、警告）保存在本 App 位于你设备上的本地历史记录中。</li>
+          <li>为维护服务质量、提升识别准确度，我们可能会在服务器上保留匿名的、不可识别个人的技术日志（例如错误报告、请求时间戳）。这些日志不会与你的身份关联。</li>
+        </ul>
+
+        <h3 style="color:#264c3b; margin:16px 0 8px; font-size:16px;">1.3 设备标识符</h3>
+        <p>本 App 会生成一个<strong>随机的匿名设备 ID</strong>，并随每次请求发送。它<strong>仅</strong>用于执行每月免费使用次数限制和防止滥用，不包含个人信息，也不会与你的姓名、邮箱或 Apple ID 关联。</p>
+
+        <h3 style="color:#264c3b; margin:16px 0 8px; font-size:16px;">1.4 购买信息（如果你订阅）</h3>
+        <ul>
+          <li>订阅由 <strong>Apple</strong> 处理，并通过第三方服务 <strong>RevenueCat</strong> 管理。我们从 RevenueCat 接收一个匿名用户 ID 和订阅状态，用于为付费用户解锁无限次使用。</li>
+          <li><strong>我们不会看到或存储你的支付信息。</strong>所有支付数据均由 Apple 依据其隐私政策处理。</li>
+        </ul>
+
+        <h2>2. 第三方服务</h2>
+        <table>
+          <tr><th>服务</th><th>用途</th><th>涉及的数据</th></tr>
+          <tr><td><strong>Cloudflare</strong>（Workers 与 KV）</td><td>转发识别请求并执行使用次数限制的后端代理</td><td>压缩后的照片、匿名设备 ID</td></tr>
+          <tr><td><strong>智谱 AI</strong>（Z.ai / BigModel）</td><td>分析照片并生成识别结果的 AI 视觉模型</td><td>压缩后的照片。<strong>处理在位于中国境内的服务器上进行。</strong></td></tr>
+          <tr><td><strong>RevenueCat</strong></td><td>订阅管理</td><td>匿名 App 用户 ID、订阅状态</td></tr>
+          <tr><td><strong>Apple</strong></td><td>App 内购买、TestFlight、App Store</td><td>依据 Apple 政策的支付与账户数据</td></tr>
+        </table>
+        <p>我们不会向广告商出售、出租或分享你的信息。本 App 不包含<strong>任何广告或分析/追踪 SDK</strong>。</p>
+
+        <h2>3. 跨境数据传输</h2>
+        <p>我们的后端运行在 Cloudflare 的全球网络上；AI 照片分析由智谱 AI 在<strong>位于中国大陆的服务器</strong>上执行。提交照片进行识别即表示你同意此类传输与处理。我们不会向中国传输任何其他个人数据。</p>
+
+        <h2>4. 法律依据（欧洲经济区/英国用户）</h2>
+        <p>我们基于<strong>你的同意</strong>（在你提交照片时给出）和<strong>合法利益</strong>（防止免费额度被滥用）来处理照片与设备标识符。你可以随时停止使用识别功能来撤回同意。</p>
+
+        <h2>5. 数据保留</h2>
+        <ul>
+          <li><strong>原始照片：</strong>不存储在服务器上（仅在内存中处理）。</li>
+          <li><strong>识别结果与缩略图：</strong>保存在你的设备上，直至你在 App 内删除或卸载本 App。</li>
+          <li><strong>服务器端使用计数器：</strong>匿名的每月请求计数，约 45 天后自动删除。</li>
+          <li><strong>匿名技术日志：</strong>为服务运营保留一段有限时间。</li>
+        </ul>
+
+        <h2>6. 你的权利与选择</h2>
+        <p>根据你的所在司法辖区（包括 GDPR 和 CCPA 下的权利），你可以：</p>
+        <ul>
+          <li>随时在 App 内<strong>删除你的历史记录</strong>；</li>
+          <li>联系我们，<strong>请求删除</strong>与你的设备 ID 关联的服务器端匿名数据；</li>
+          <li>随时通过 Apple ID 设置<strong>取消订阅</strong>；</li>
+          <li>联系我们访问、更正或导出我们持有的关于你的任何个人数据（我们持有极少——见上文各节）。</li>
+        </ul>
+        <p>我们不会明知故犯地收集 13 岁以下儿童的数据。本 App 不面向儿童。</p>
+
+        <h2>7. 重要安全提示</h2>
+        <div class="notice">
+          <strong>识别结果由 AI 生成，可能出错。</strong>
+          这些结果仅供参考，不构成专业建议。<strong>切勿仅凭 App 结果食用任何野生蘑菇或植物。</strong>食用任何在野外发现的物体前，务必咨询合格的专家。
+        </div>
+
+        <h2>8. 本政策的变更</h2>
+        <p>随着本 App 的发展，我们可能会更新本隐私政策。重大变更将在 App 内或本页面上公布，并更新"最后更新"日期。</p>
+
+        <h2>9. 联系我们</h2>
+        <p>如果你对本政策或你的数据有疑问，请通过 <strong>support@fungilens.example.com</strong> 联系我们。</p>
+      </div>
+    </main>
+
+    <footer><img class="footer-icon" src="app-icon.png" alt=""> <a href="support.html">技术支持</a> · <a href="terms.html">使用条款</a> · © 2026 FungiLens 保留所有权利。</footer>
+  </div>
+
+  <script>
+  (function () {
+    var KEY = 'fungilens.lang';
+    var root = document.documentElement;
+    function readStored() {
+      try { return localStorage.getItem(KEY); } catch (e) { return null; }
+    }
+    function setLang(next) {
+      var lang = next === 'zh' ? 'zh' : 'en';
+      root.classList.toggle('lang-zh', lang === 'zh');
+      root.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
+      var enBtn = document.getElementById('lang-en');
+      var zhBtn = document.getElementById('lang-zh');
+      if (enBtn) enBtn.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+      if (zhBtn) zhBtn.setAttribute('aria-pressed', lang === 'zh' ? 'true' : 'false');
+      var enTitle = root.getAttribute('data-title-en');
+      var zhTitle = root.getAttribute('data-title-zh');
+      document.title = (lang === 'zh' && zhTitle) ? zhTitle : (enTitle || document.title);
+    }
+    window.setLang = setLang;
+    var start = readStored() === 'zh' ? 'zh' : 'en';
+    setLang(start);
+    document.addEventListener('DOMContentLoaded', function () {
+      var enBtn = document.getElementById('lang-en');
+      var zhBtn = document.getElementById('lang-zh');
+      if (enBtn) enBtn.addEventListener('click', function () { setLang('en'); });
+      if (zhBtn) zhBtn.addEventListener('click', function () { setLang('zh'); });
+      setLang(start);
+    });
+  })();
+  </script>
 </body>
 </html>
